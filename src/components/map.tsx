@@ -4,42 +4,62 @@ we need to make this component client rendered as well else error occurs
 */
 'use client';
 
+import { MapProvider } from '@/providers/map-provider';
 //Map component Component from library
 import { GoogleMap } from '@react-google-maps/api';
+import { useEffect, useState } from 'react';
 
 //Map's styling
 export const defaultMapContainerStyle = {
   width: '100%',
-  height: '80vh',
+  height: '100vh',
   borderRadius: '15px 0px 0px 15px',
 };
 
-// https://www.google.com/maps/place/Mini+hotel+Non-Stop/@50.446168,30.496051,17z/data=!4m9!3m8!1s0x40d4cef4b0c35e11:0xeb7dc02acc427068!5m2!4m1!1i2!8m2!3d50.4457069!4d30.4945147!16s%2Fg%2F11c0xdd8tx?hl=en&entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D
-const defaultMapCenter = {
-  lat: 50.4457069,
-  lng: 30.4945147,
-};
+const defaultMapZoom = 12;
 
-const defaultMapZoom = 18;
-
-const defaultMapOptions = {
-  zoomControl: true,
+const defaultMapOptions: google.maps.MapOptions = {
+  zoomControl: false,
   tilt: 0,
   gestureHandling: 'auto',
   mapTypeId: 'roadmap',
+  disableDefaultUI: true,
+  draggable: true,
 };
 
-const MapComponent = () => {
+export function MapComponent({ className }: { className?: string }) {
+  const [location, setLocation] = useState({
+    lat: 0,
+    lng: 0,
+    located: false,
+  });
+
+  useEffect(() => {
+    if (navigator.geolocation && location.located === false) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+
+    function success(position: GeolocationPosition) {
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+      setLocation({ lat, lng, located: true });
+    }
+
+    function error() {
+      console.log('Unable to retrieve your location');
+    }
+  });
+
   return (
-    <div className="w-full">
-      <GoogleMap
-        mapContainerStyle={defaultMapContainerStyle}
-        center={defaultMapCenter}
-        zoom={defaultMapZoom}
-        options={defaultMapOptions}
-      />
-    </div>
+    <MapProvider>
+      <div className={'w-full fixed top-0 -z-10 ' + className}>
+        <GoogleMap
+          mapContainerStyle={defaultMapContainerStyle}
+          center={location}
+          zoom={defaultMapZoom}
+          options={defaultMapOptions}
+        />
+      </div>
+    </MapProvider>
   );
-};
-
-export { MapComponent };
+}

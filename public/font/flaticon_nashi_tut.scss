@@ -1,0 +1,65 @@
+$flaticon_nashi_tut-font: "flaticon_nashi_tut";
+
+@font-face {
+    font-family: $flaticon_nashi_tut-font;
+    src: url("./flaticon_nashi_tut.woff2?a1e98ac88924afa489b8a9672607695f") format("woff2"),
+url("./flaticon_nashi_tut.woff?a1e98ac88924afa489b8a9672607695f") format("woff"),
+url("./flaticon_nashi_tut.eot?a1e98ac88924afa489b8a9672607695f#iefix") format("embedded-opentype"),
+url("./flaticon_nashi_tut.ttf?a1e98ac88924afa489b8a9672607695f") format("truetype"),
+url("./flaticon_nashi_tut.svg?a1e98ac88924afa489b8a9672607695f#flaticon_nashi_tut") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_nashi_tut !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_nashi_tut-map: (
+    "church": "\f101",
+    "logistics": "\f102",
+    "passport": "\f103",
+    "government": "\f104",
+    "coffee-cup": "\f105",
+    "beer": "\f106",
+    "paper": "\f107",
+    "today": "\f108",
+    "job-seeker": "\f109",
+    "stethoscope": "\f10a",
+);
+
+.flaticon-church:before {
+    content: map-get($flaticon_nashi_tut-map, "church");
+}
+.flaticon-logistics:before {
+    content: map-get($flaticon_nashi_tut-map, "logistics");
+}
+.flaticon-passport:before {
+    content: map-get($flaticon_nashi_tut-map, "passport");
+}
+.flaticon-government:before {
+    content: map-get($flaticon_nashi_tut-map, "government");
+}
+.flaticon-coffee-cup:before {
+    content: map-get($flaticon_nashi_tut-map, "coffee-cup");
+}
+.flaticon-beer:before {
+    content: map-get($flaticon_nashi_tut-map, "beer");
+}
+.flaticon-paper:before {
+    content: map-get($flaticon_nashi_tut-map, "paper");
+}
+.flaticon-today:before {
+    content: map-get($flaticon_nashi_tut-map, "today");
+}
+.flaticon-job-seeker:before {
+    content: map-get($flaticon_nashi_tut-map, "job-seeker");
+}
+.flaticon-stethoscope:before {
+    content: map-get($flaticon_nashi_tut-map, "stethoscope");
+}

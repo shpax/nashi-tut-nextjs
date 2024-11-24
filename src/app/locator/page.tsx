@@ -1,10 +1,11 @@
 import { MapComponent } from '@/components/map';
-import { MapProvider } from '@/providers/map-provider';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { Fragment } from 'react';
 
 export default function Page() {
   return (
-    <MapProvider>
+    <Fragment>
       <MapComponent />
-    </MapProvider>
+    </Fragment>
   );
 }

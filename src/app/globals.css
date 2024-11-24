@@ -1,3 +1,5 @@
+@import url('/font/flaticon_nashi_tut.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #ffa31a;
+  --secondary: #6476fe;
 }
 
 @media (prefers-color-scheme: dark) {
