@@ -11,8 +11,8 @@ export default async function Page() {
       href={category.path}
       className={`block ${category.color} brightness-100  content-center text-center rounded-3xl size-32 px-4 shadow`}
     >
-      <i className={category.icon + ' items-center text-6xl block '} />
-      {/* <p className="text-zinc-100">{category.name}</p> */}
+      <i className={category.icon + ' items-center text-6xl block mt-3'} />
+      <p className="text-zinc-100">{category.name}</p>
     </Link>
   ));
 
