@@ -1,5 +1,4 @@
 import { Background } from '@/components/background';
-import { MapComponent } from '@/components/map';
 import { Search } from '@/components/search';
 import { categories } from '@/data/categories';
 import Link from 'next/link';
@@ -21,7 +20,6 @@ export default async function Page() {
     <Fragment>
       <Search />
 
-      {/* <MapComponent className="brightness-50" /> */}
       <Background />
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-12 justify-items-center mt-12 z-10 px-8">

@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import { BottomNav } from '@/components/bottom-nav';
-import { MapComponent } from '@/components/map';
-import { MapContext } from '@/contexts/map';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',

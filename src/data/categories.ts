@@ -1,12 +1,3 @@
-import {
-  FilmIcon,
-  ShoppingCartIcon,
-  ShoppingBagIcon,
-  ChatBubbleBottomCenterTextIcon,
-  DocumentTextIcon,
-  QuestionMarkCircleIcon,
-} from '@heroicons/react/24/outline';
-
 interface Category {
   id: number;
   name: string;
