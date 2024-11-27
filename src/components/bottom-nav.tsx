@@ -5,29 +5,37 @@ import {
   HandThumbUpIcon,
   UserIcon,
   Cog6ToothIcon,
-  HomeIcon,
-} from '@heroicons/react/24/solid';
+  QuestionMarkCircleIcon,
+} from '@heroicons/react/24/outline';
+import { HomeIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import svgLocation from './logo-04.svg';
 
 export function BottomNav() {
   const pathname = usePathname();
 
   const navigationIcons = [
     ['/profile', UserIcon],
-    ['/locator', MapPinIcon],
+    [
+      '/locator',
+      ({ className }: { className: string }) => (
+        <Image src={svgLocation} alt="logo" className={className} />
+      ),
+    ],
     ['/home', HomeIcon],
     ['/donate', HandThumbUpIcon],
-    ['/settings', Cog6ToothIcon],
+    ['/faq', QuestionMarkCircleIcon],
   ].map(([path, Icon], index) => (
     <li
-      className={`relative transition ease-in-out hover:scale-125 ${
-        pathname === path ? 'text-secondary scale-125' : ''
+      className={`relative transition ease-in-out  ${
+        pathname === path ? 'text-secondary scale-150' : ''
       }`}
       key={index}
     >
       <Link href={path as string} className="">
-        <Icon className="size-6" />
+        <Icon className={'size-6'} />
       </Link>
     </li>
   ));

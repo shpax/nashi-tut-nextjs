@@ -4,101 +4,81 @@ interface Category {
   icon: string;
   path: string;
   color: string;
+  locations: number;
 }
 
-// .flaticon-church
-// Author: #author-link-flaticon-church#
-
-// .flaticon-logistics
-// Author: #author-link-flaticon-logistics#
-
-// .flaticon-passport
-// Author: #author-link-flaticon-passport#
-
-// .flaticon-government
-// Author: #author-link-flaticon-government#
-
-// .flaticon-coffee-cup
-// Author: #author-link-flaticon-coffee-cup#
-
-// .flaticon-beer
-// Author: #author-link-flaticon-beer#
-
-// .flaticon-paper
-// Author: #author-link-flaticon-paper#
-
-// .flaticon-today
-// Author: #author-link-flaticon-today#
-
-// .flaticon-job-seeker
-// Author: #author-link-flaticon-job-seeker#
-
-// .flaticon-stethoscope
-// Author: #author-link-flaticon-stethoscope#
+export enum Color {
+  Green = 'bg-[#7dfad2]',
+  Blue = 'bg-[#5b78e6]',
+  Yellow = 'bg-[#ffec99]',
+  Brown = 'bg-[#d9a880]',
+  LogoBlue = 'bg-[#0fa5fd]',
+  LogoYellow = 'bg-[#fde009]',
+}
 
 export const categories: Category[] = [
-  {
-    id: 1,
-    name: 'Пошта',
-    icon: 'flaticon-logistics',
-    path: '/mail',
-    color: 'bg-[#fc7bd5]',
-  },
   {
     id: 2,
     name: "Кав'ярні",
     icon: 'flaticon-coffee-cup',
     path: '/cafe',
-    color: 'bg-[#ae7dfa]',
+    color: Color.Brown,
+    locations: 4,
   },
   {
     id: 8,
     name: 'Паби',
     icon: 'flaticon-beer',
     path: '/pubs',
-    color: 'bg-[#7fc6fa]',
-  },
-  // { id: 3, name: 'Церкви', icon: 'flaticon-church', path: '/churches' },
-  // { id: 4, name: 'Магазини', icon: 'flaticon-shopping-bag', path: '/shops' },
-  // {
-  //   id: 5,
-  //   name: 'Паспортний стіл',
-  //   icon: 'flaticon-passport',
-  //   path: '/passport',
-  // },
-  {
-    id: 6,
-    name: 'Медицина',
-    icon: 'flaticon-stethoscope',
-    path: '/hospitals',
-    color: 'bg-[#ffbd66]',
+    color: Color.Brown,
+    locations: 4,
   },
   {
-    id: 7,
-    name: 'Держава',
-    icon: 'flaticon-government',
-    path: '/government',
-    color: 'bg-[#fc7bd5]',
+    id: 1,
+    name: 'Пошта',
+    icon: 'flaticon-logistics',
+    path: '/mail',
+    color: Color.Blue,
+    locations: 4,
   },
   {
     id: 9,
     name: 'Робота',
     icon: 'flaticon-job-seeker',
     path: '/job',
-    color: 'bg-[#ae7dfa]',
+    color: Color.Blue,
+    locations: 4,
   },
   {
-    id: 10,
-    name: 'Послуги',
-    icon: 'flaticon-paper',
-    path: '/services',
-    color: 'bg-[#7fc6fa]',
+    id: 6,
+    name: 'Медицина',
+    icon: 'flaticon-stethoscope',
+    path: '/hospitals',
+    color: Color.Green,
+    locations: 4,
   },
   {
     id: 11,
     name: 'Діти',
     icon: 'flaticon-today',
     path: '/kids',
-    color: 'bg-[#ffbd66]',
+    color: Color.Green,
+    locations: 4,
+  },
+  {
+    id: 7,
+    name: 'Держава',
+    icon: 'flaticon-government',
+    path: '/government',
+    color: Color.Yellow,
+    locations: 4,
+  },
+  {
+    id: 10,
+    name: 'Послуги',
+    icon: 'flaticon-paper',
+    path: '/services',
+    color: Color.Yellow,
+    locations: 4,
   },
 ];

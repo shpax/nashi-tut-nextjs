@@ -2,7 +2,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 export function Search() {
   return (
-    <div className="z-10 w-full">
+    <div className="z-10 w-full mt-6">
       <div
         className="bg-[#ffbd66] rounded-full shadow-lg overflow-hidden grow mt-12 mx-10 max-w-xl flex flex-row py-2 px-3 items-center 
       transition-all	 ease-out duration-300
