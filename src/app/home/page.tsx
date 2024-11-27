@@ -1,5 +1,4 @@
 import { Background } from '@/components/background';
-import { Search } from '@/components/search';
 import { categories } from '@/data/categories';
 import Link from 'next/link';
 import { Fragment } from 'react';

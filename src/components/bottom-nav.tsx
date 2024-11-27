@@ -1,10 +1,8 @@
 'use client';
 
 import {
-  MapPinIcon,
   HandThumbUpIcon,
   UserIcon,
-  Cog6ToothIcon,
   QuestionMarkCircleIcon,
 } from '@heroicons/react/24/outline';
 import { HomeIcon } from '@heroicons/react/24/solid';
