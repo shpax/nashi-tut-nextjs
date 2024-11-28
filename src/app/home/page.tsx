@@ -35,7 +35,7 @@ export default async function Page() {
     <Fragment>
       <Background />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto pb-40">
         <div className="size-56 mx-auto mt-12">
           <Image src={logoSvg} alt="logo" />
         </div>
