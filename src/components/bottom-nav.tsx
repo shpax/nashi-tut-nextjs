@@ -28,7 +28,7 @@ export function BottomNav() {
   ].map(([path, Icon], index) => (
     <li
       className={`relative transition ease-in-out  ${
-        pathname === path ? 'text-secondary scale-150' : ''
+        pathname === path ? 'text-secondary-600 scale-150' : ''
       }`}
       key={index}
     >

@@ -47,7 +47,7 @@ export const categories: Category[] = [
     icon: 'flaticon-job-seeker',
     path: '/job',
     color: Color.Blue,
-    locations: 4,
+    locations: 0,
   },
   {
     id: 6,
