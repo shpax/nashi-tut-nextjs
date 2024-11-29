@@ -20,7 +20,7 @@ export default async function Page() {
           category.locations > 0 ? 'bg-secondary-200' : 'bg-gray-400'
         } rounded-full flex justify-center items-center`}
       >
-        <i className={`${category.icon} mt-1 text-xl`} />
+        <i className={`${category.icon} mt-1 text-2xl`} />
       </div>
       <div className="justify-self-end">
         <p>{category.name}</p>

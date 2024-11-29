@@ -3,66 +3,15 @@ interface Category {
   name: string;
   icon: string;
   path: string;
-  color: string;
   locations: number;
-}
-
-export enum Color {
-  Green = 'bg-[#7dfad2]',
-  Blue = 'bg-[#5b78e6]',
-  Yellow = 'bg-[#ffec99]',
-  Brown = 'bg-[#d9a880]',
-  LogoBlue = 'bg-[#0fa5fd]',
-  LogoYellow = 'bg-[#fde009]',
 }
 
 export const categories: Category[] = [
   {
     id: 2,
-    name: "Кав'ярні",
-    icon: 'flaticon-coffee-cup',
-    path: '/cafe',
-    color: Color.Brown,
-    locations: 4,
-  },
-  {
-    id: 8,
-    name: 'Паби',
-    icon: 'flaticon-beer',
-    path: '/pubs',
-    color: Color.Brown,
-    locations: 4,
-  },
-  {
-    id: 1,
-    name: 'Пошта',
-    icon: 'flaticon-logistics',
-    path: '/mail',
-    color: Color.Blue,
-    locations: 4,
-  },
-  {
-    id: 9,
-    name: 'Робота',
-    icon: 'flaticon-job-seeker',
-    path: '/job',
-    color: Color.Blue,
-    locations: 0,
-  },
-  {
-    id: 6,
-    name: 'Медицина',
-    icon: 'flaticon-stethoscope',
-    path: '/hospitals',
-    color: Color.Green,
-    locations: 4,
-  },
-  {
-    id: 11,
-    name: 'Діти',
-    icon: 'flaticon-today',
-    path: '/kids',
-    color: Color.Green,
+    name: 'Їсти і пити',
+    icon: 'flaticon-iftar',
+    path: '/food',
     locations: 4,
   },
   {
@@ -70,15 +19,62 @@ export const categories: Category[] = [
     name: 'Держава',
     icon: 'flaticon-government',
     path: '/government',
-    color: Color.Yellow,
+    locations: 4,
+  },
+  {
+    id: 1,
+    name: 'Пошта',
+    icon: 'flaticon-email',
+    path: '/mail',
+    locations: 4,
+  },
+  {
+    id: 11,
+    name: 'Діти',
+    icon: 'flaticon-boy',
+    path: '/kids',
+    locations: 4,
+  },
+  {
+    id: 12,
+    name: 'Магазини',
+    icon: 'flaticon-store',
+    path: '/stores',
+    locations: 4,
+  },
+  {
+    id: 8,
+    name: 'Здоровʼя',
+    icon: 'flaticon-lifeline-in-a-heart-outline',
+    path: '/health',
+    locations: 4,
+  },
+  {
+    id: 9,
+    name: 'Краса',
+    icon: 'flaticon-woman-hair',
+    path: '/beauty',
+    locations: 0,
+  },
+  {
+    id: 6,
+    name: 'Сервіс',
+    icon: 'flaticon-customer-service',
+    path: '/services',
     locations: 4,
   },
   {
     id: 10,
-    name: 'Послуги',
-    icon: 'flaticon-paper',
-    path: '/services',
-    color: Color.Yellow,
+    name: 'Культура',
+    icon: 'flaticon-theatre',
+    path: '/culture',
+    locations: 4,
+  },
+  {
+    id: 13,
+    name: 'Інше',
+    icon: 'flaticon-option',
+    path: '/other',
     locations: 4,
   },
 ];
