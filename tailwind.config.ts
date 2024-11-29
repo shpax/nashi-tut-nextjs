@@ -30,6 +30,20 @@ const config: Config = {
       backgroundImage: {
         map: "url('/maps/map-light.webp')",
       },
+
+      keyframes: {
+        slide: {
+          '0%, 100%': {
+            'background-position': '45% 50%',
+          },
+          '50%': {
+            'background-position': '55% 50%',
+          },
+        },
+      },
+      animation: {
+        slide: 'slide 60s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
