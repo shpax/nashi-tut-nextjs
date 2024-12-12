@@ -2,11 +2,11 @@ $flaticon_nashi_tut-font: "flaticon_nashi_tut";
 
 @font-face {
     font-family: $flaticon_nashi_tut-font;
-    src: url("./flaticon_nashi_tut.woff2?c8d3f6a3b8d1812cc76488cfb7d3e1fa") format("woff2"),
-url("./flaticon_nashi_tut.woff?c8d3f6a3b8d1812cc76488cfb7d3e1fa") format("woff"),
-url("./flaticon_nashi_tut.eot?c8d3f6a3b8d1812cc76488cfb7d3e1fa#iefix") format("embedded-opentype"),
-url("./flaticon_nashi_tut.ttf?c8d3f6a3b8d1812cc76488cfb7d3e1fa") format("truetype"),
-url("./flaticon_nashi_tut.svg?c8d3f6a3b8d1812cc76488cfb7d3e1fa#flaticon_nashi_tut") format("svg");
+    src: url("./flaticon_nashi_tut.woff2?2d0a83c8b65a5422cfa4776784951363") format("woff2"),
+url("./flaticon_nashi_tut.woff?2d0a83c8b65a5422cfa4776784951363") format("woff"),
+url("./flaticon_nashi_tut.eot?2d0a83c8b65a5422cfa4776784951363#iefix") format("embedded-opentype"),
+url("./flaticon_nashi_tut.ttf?2d0a83c8b65a5422cfa4776784951363") format("truetype"),
+url("./flaticon_nashi_tut.svg?2d0a83c8b65a5422cfa4776784951363#flaticon_nashi_tut") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -41,6 +41,9 @@ $flaticon_nashi_tut-map: (
     "customer-service": "\f112",
     "theatre": "\f113",
     "option": "\f114",
+    "star": "\f115",
+    "star-1": "\f116",
+    "map": "\f117",
 );
 
 .flaticon-church:before {
@@ -102,4 +105,13 @@ $flaticon_nashi_tut-map: (
 }
 .flaticon-option:before {
     content: map-get($flaticon_nashi_tut-map, "option");
+}
+.flaticon-star:before {
+    content: map-get($flaticon_nashi_tut-map, "star");
+}
+.flaticon-star-1:before {
+    content: map-get($flaticon_nashi_tut-map, "star-1");
+}
+.flaticon-map:before {
+    content: map-get($flaticon_nashi_tut-map, "map");
 }

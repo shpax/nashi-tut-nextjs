@@ -12,13 +12,13 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        primary: 'var(--primary)',
-        secondary: {
-          DEFAULT: 'var(--secondary)',
+        secondary: 'var(--secondary)',
+        primary: {
+          DEFAULT: 'var(--primary)',
           200: '#7eaff0',
           300: '#6ca4ed',
           400: '#5998eb',
-          500: 'var(--secondary)',
+          500: 'var(--primary)',
           600: '#407fd2',
           700: '#3971ba',
         },

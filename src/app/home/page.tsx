@@ -12,12 +12,12 @@ export default async function Page() {
       key={category.id}
       href={category.path}
       className={`block  relative ${
-        category.locations > 0 ? 'bg-secondary' : 'bg-gray-500'
+        category.locations > 0 ? 'bg-primary' : 'bg-gray-500'
       }  flex flex-row gap-2 items-center rounded-full w-40 h-12 shadow text-gray-100`}
     >
       <div
         className={`h-full aspect-square px-1 ${
-          category.locations > 0 ? 'bg-secondary-200' : 'bg-gray-400'
+          category.locations > 0 ? 'bg-primary-200' : 'bg-gray-400'
         } rounded-full flex justify-center items-center`}
       >
         <i className={`${category.icon} mt-1 text-2xl`} />
@@ -41,7 +41,7 @@ export default async function Page() {
         </div>
         <div className="z-10 w-full mt-6">
           <div
-            className="bg-secondary rounded-full shadow-lg w-40 mx-auto max-w-xl flex flex-row py-1 px-3 items-center 
+            className="bg-primary rounded-full shadow-lg w-40 mx-auto max-w-xl flex flex-row py-1 px-3 items-center 
       transition-all ease-out duration-300
       focus-within:bg-white focus-within:text-gray-400 focus-within:w-80 "
           >
