@@ -6,7 +6,7 @@ import mapboxgl, { Map } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 interface MapProps {
-  coordinates: [number, number];
+  coordinates?: [number, number];
 }
 
 export const MapboxMap = ({
