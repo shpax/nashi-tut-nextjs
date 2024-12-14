@@ -6,11 +6,17 @@ import mapboxgl, { Map } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 interface MapProps {
-  coordinates?: [number, number];
+  center: mapboxgl.LngLatLike;
+
+  markers: mapboxgl.LngLatLike[];
 }
 
+// TODO: move out geo
+// TODO: move out locations
 export const MapboxMap = ({
   className,
+  center,
+  markers,
 }: React.HTMLProps<HTMLDivElement> & MapProps) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<Map>(null);
@@ -20,28 +26,13 @@ export const MapboxMap = ({
 
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current!,
-      // center: coordinates, // starting position [lng, lat]
+      center, // starting position [lng, lat]
       zoom: 11, // starting zoom
     });
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success, error);
-    }
-
-    function success(position: GeolocationPosition) {
-      const lat = position.coords.latitude;
-      const lng = position.coords.longitude;
-      // setLocation({ lat, lng, located: true });
-
-      mapRef.current!.setCenter({
-        lat,
-        lng,
-      });
-    }
-
-    function error() {
-      console.log('Unable to retrieve your location');
-    }
+    markers.forEach((marker) => {
+      new mapboxgl.Marker().setLngLat(marker).addTo(mapRef.current!);
+    });
   });
 
   return (

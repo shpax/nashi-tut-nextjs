@@ -8,7 +8,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -21,7 +21,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -34,7 +34,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -47,7 +47,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -60,7 +60,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -73,7 +73,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -86,7 +86,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -99,7 +99,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -112,7 +112,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -125,7 +125,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -138,7 +138,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
@@ -151,7 +151,7 @@ export const MOCKED_LOCATIONS: Location[] = [
     description: 'Опис магазину 1',
     address: 'Адреса магазину 1',
     phone: 'Телефон магазину 1',
-    coordinates: [50.4501, 30.5234],
+    coordinates: [43.6168063, -79.5619585],
 
     icon: 'flaticon-iftar',
 
