@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import { BottomNav } from '@/components/bottom-nav';
+import { ReactQueryClientProvider } from '@/providers/react-query-provider';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
 
         <BottomNav />
       </body>

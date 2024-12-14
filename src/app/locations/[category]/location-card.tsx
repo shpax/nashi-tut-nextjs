@@ -1,13 +1,18 @@
-import { Location } from '@/app/api/locations';
+import { Location } from '@/api/interfaces';
 import { Card } from '@/components/card';
 import Link from 'next/link';
+import { useState } from 'react';
 
 type LocationCardProps = {
   location: Location;
 };
 
 export function LocationCard({ location }: LocationCardProps) {
-  const { icon, name, media, rating, address, isFeatured } = location;
+  const { icon, name, media, rating, address, coordinates, isFeatured } =
+    location;
+  const [lat, long] = coordinates;
+
+  const [isOpen, setOpen] = useState(false);
 
   const RatingStars = [1, 2, 3, 4, 5].map((number, i) => (
     <i
@@ -25,25 +30,37 @@ export function LocationCard({ location }: LocationCardProps) {
   );
 
   return (
-    <Card className="flex flex-row justify-between">
+    <Card
+      className={`grid grid-cols-3 grid-flow-row-dense relative justify-between transition-all ease-out duration-200 mt-4 ${isOpen ? 'h-80' : 'h-28'}`}
+      onClick={() => setOpen(!isOpen)}
+    >
       <div
-        className={`grow-1 w-24 aspect-square bg-primary-200 flex justify-center items-center `}
+        className={`grow-1 bg-primary-200 flex justify-center items-center ${isOpen ? 'col-span-3 h-40' : 'col-span-1'}`}
       >
         {ImageComponent}
       </div>
-      <div className="p-3 grow">
+      <div className="p-3 grow col-span-2">
         <p className="text-lg">{name}</p>
         <p className="text-sm text-secondary flex gap-0.5 items-center">
           {RatingStars}
         </p>
         <p className="text-sm">{address}</p>
+
+        {isOpen && (
+          <div className="flex flex-col gap-2 mt-2">
+            <p className="text-sm">{location.description}</p>
+            <p className="text-sm">{location.phone}</p>
+          </div>
+        )}
       </div>
-      <div className="flex flex-col justify-between items-center px-3 py-2 gap-2">
+
+      <div className="flex flex-col justify-between items-center px-3 py-2 gap-2  absolute top-0 right-0 bottom-0">
         <i
           className={`${isFeatured ? 'flaticon-star-1' : 'flaticon-star'} mt-1 text-2xl text-secondary`}
         />
         <Link
-          href={`/locations/${name}`}
+          href={`https://www.google.com/maps/place/${lat},${long}`}
+          target="_blank"
           className="rounded-full bg-white text-primary shadow-lg size-12 flex items-center justify-center"
         >
           <i className="flaticon-map mt-1 text-2xl" />

@@ -1,12 +1,6 @@
-interface Category {
-  id: number;
-  name: string;
-  icon: string;
-  path: string;
-  locations: number;
-}
+import { Category } from '../interfaces';
 
-export const categories: Category[] = [
+export const MOCKED_CATEGORIES: Category[] = [
   {
     id: 2,
     name: 'Їсти і пити',

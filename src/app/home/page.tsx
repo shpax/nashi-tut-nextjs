@@ -1,13 +1,17 @@
+'use client';
 import { Background } from '@/components/background';
-import { categories } from '@/data/categories';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import logoSvg from './logo-08.svg';
 import Image from 'next/image';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { useCategories } from '@/api/hooks';
 
-export default async function Page() {
-  const categoriesComponents = categories.map((category) => (
+export default function Page() {
+  const { data } = useCategories();
+  // const data = MOCKED_CATEGORIES;
+
+  const categoriesComponents = data.map((category) => (
     <Link
       key={category.id}
       href={category.path}
