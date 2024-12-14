@@ -1,4 +1,3 @@
-import { MapComponent } from '@/components/map';
 import { MapboxMap } from '@/components/mapbox';
 import { Fragment } from 'react';
 

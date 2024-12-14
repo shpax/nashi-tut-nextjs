@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import mapboxgl, { Map } from 'mapbox-gl';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -11,16 +11,9 @@ interface MapProps {
 
 export const MapboxMap = ({
   className,
-  coordinates,
 }: React.HTMLProps<HTMLDivElement> & MapProps) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<Map>(null);
-
-  const [location, setLocation] = useState({
-    lat: 0,
-    lng: 0,
-    located: false,
-  });
 
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_PUBLIC_TOKEN!;
@@ -31,7 +24,7 @@ export const MapboxMap = ({
       zoom: 11, // starting zoom
     });
 
-    if (navigator.geolocation && location.located === false) {
+    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error);
     }
 
