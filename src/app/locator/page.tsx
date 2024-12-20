@@ -1,5 +1,4 @@
 'use client';
-import { useLocations } from '@/api/hooks';
 import { MapboxMap } from '@/components/mapbox';
 import { Fragment, useEffect, useState } from 'react';
 
@@ -12,12 +11,12 @@ interface GeoState {
 export default function Page() {
   const [geo, setGeo] = useState<GeoState | null>(null);
 
-  const { data } = useLocations('', '');
+  // const { data } = useLocations('', '');
 
-  const markers = data?.map((location) => ({
-    lat: location.coordinates[0],
-    lng: location.coordinates[1],
-  }));
+  // const markers = data?.map((location) => ({
+  //   lat: location.coordinates[0],
+  //   lng: location.coordinates[1],
+  // }));
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -42,7 +41,7 @@ export default function Page() {
   return (
     <Fragment>
       {/* <MapComponent /> */}
-      {geo && <MapboxMap className="" center={geo} markers={markers} />}
+      {geo && <MapboxMap className="" center={geo} markers={[]} />}
     </Fragment>
   );
 }

@@ -1,15 +1,30 @@
-import { Location } from '@/api/interfaces';
 import { Card } from '@/components/card';
 import Link from 'next/link';
 import { useState } from 'react';
 
-type LocationCardProps = {
-  location: Location;
+type LocationProps = {
+  icon: string;
+  name: string;
+  media: string[];
+  rating: number;
+  address: string;
+  description: string;
+  coordinates: [number, number];
+  isFeatured: boolean;
 };
 
-export function LocationCard({ location }: LocationCardProps) {
-  const { icon, name, media, rating, address, coordinates, isFeatured } =
-    location;
+export function LocationCard({ location }: { location: LocationProps }) {
+  const {
+    icon,
+    name,
+    media,
+    rating,
+    address,
+    description,
+    coordinates,
+    isFeatured,
+  } = location;
+
   const [lat, long] = coordinates;
 
   const [isOpen, setOpen] = useState(false);
@@ -48,8 +63,7 @@ export function LocationCard({ location }: LocationCardProps) {
 
         {isOpen && (
           <div className="flex flex-col gap-2 mt-2">
-            <p className="text-sm">{location.description}</p>
-            <p className="text-sm">{location.phone}</p>
+            <p className="text-sm">{description}</p>
           </div>
         )}
       </div>

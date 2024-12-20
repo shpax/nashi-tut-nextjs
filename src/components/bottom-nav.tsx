@@ -22,7 +22,7 @@ export function BottomNav() {
         <Image src={svgLocation} alt="logo" className={className} />
       ),
     ],
-    ['/home', HomeIcon],
+    ['/locations', HomeIcon],
     ['/donate', HandThumbUpIcon],
     ['/faq', QuestionMarkCircleIcon],
   ].map(([path, Icon], index) => (
