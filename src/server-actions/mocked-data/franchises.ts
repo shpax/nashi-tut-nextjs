@@ -6,6 +6,12 @@ export const MOCKED_FRANCHISES: Franchise[] = [
     name: 'Franchise 1',
     logo: 'https://via.placeholder.com/300x200',
     description: 'Description 1',
+    tags: [
+      {
+        id: 1,
+        name: 'українська мова',
+      },
+    ],
     contacts: [
       {
         label: 'Phone',
@@ -20,6 +26,14 @@ export const MOCKED_FRANCHISES: Franchise[] = [
       {
         id: 1,
         coordinates: [43.6168063, -79.5619585],
+        rating: 4,
+        address: 'Address 1',
+        tags: [
+          {
+            id: 2,
+            name: 'допомога',
+          },
+        ],
         contacts: [
           {
             label: 'Phone',
@@ -46,6 +60,12 @@ export const MOCKED_FRANCHISES: Franchise[] = [
     name: 'Franchise 1',
     logo: 'https://via.placeholder.com/300x200',
     description: 'Description 1',
+    tags: [
+      {
+        id: 1,
+        name: 'українська мова',
+      },
+    ],
     contacts: [
       {
         label: 'Phone',
@@ -58,8 +78,16 @@ export const MOCKED_FRANCHISES: Franchise[] = [
     ],
     locations: [
       {
-        id: 1,
+        id: 2,
         coordinates: [43.6168063, -79.5619585],
+        rating: 4.6,
+        address: 'Address 1',
+        tags: [
+          {
+            id: 2,
+            name: 'допомога',
+          },
+        ],
         contacts: [
           {
             label: 'Phone',
@@ -86,6 +114,12 @@ export const MOCKED_FRANCHISES: Franchise[] = [
     name: 'Franchise 1',
     logo: 'https://via.placeholder.com/300x200',
     description: 'Description 1',
+    tags: [
+      {
+        id: 1,
+        name: 'українська мова',
+      },
+    ],
     contacts: [
       {
         label: 'Phone',
@@ -98,8 +132,16 @@ export const MOCKED_FRANCHISES: Franchise[] = [
     ],
     locations: [
       {
-        id: 1,
+        id: 3,
         coordinates: [43.6168063, -79.5619585],
+        rating: 3,
+        address: 'Address 1',
+        tags: [
+          {
+            id: 2,
+            name: 'допомога',
+          },
+        ],
         contacts: [
           {
             label: 'Phone',

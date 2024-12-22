@@ -19,8 +19,11 @@ export interface Contact {
 
 export interface Location {
   id: number;
-  coordinates: number[];
+  rating: number;
+  coordinates: [number, number];
+  address: string;
   contacts: Contact[];
+  tags: Tag[];
 }
 
 export interface SocialLink {
@@ -32,9 +35,15 @@ export interface SocialLink {
 export interface Franchise {
   id: number;
   name: string;
-  logo: string;
+  logo?: string;
   description: string;
   contacts: Contact[];
   locations: Location[];
   socialLinks: SocialLink[];
+  tags: Tag[];
+}
+
+export interface Tag {
+  id: number;
+  name: string;
 }

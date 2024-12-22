@@ -6,16 +6,18 @@ import { CategoryDTO, CityDTO, LocationDTO } from './interfaces';
 const client = createDirectus(process.env.DIRECTUS_URL!).with(rest());
 
 export const getDirectusCategories = async (
-  cityId: number,
-  slug: string = ''
+  citySlug: string = '',
+  categorySlug: string = ''
 ) =>
   client.request<CategoryDTO[]>(
     readItems('categories', {
-      filter: slug
+      filter: categorySlug
         ? {
             slug: {
-              _eq: slug,
+              _eq: categorySlug,
             },
+
+            citySlug,
           }
         : {},
     })

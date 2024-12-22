@@ -19,8 +19,8 @@ export async function getCities(): Promise<City[]> {
   });
 }
 
-export async function getCategories(cityId: number): Promise<Category[]> {
-  const categories = await getDirectusCategories(cityId);
+export async function getCategories(citySlug: string): Promise<Category[]> {
+  const categories = await getDirectusCategories(citySlug);
 
   return categories.map(({ id, slug, name_ua, icon }) => {
     if (slug === null || name_ua === null || icon === null)
@@ -38,7 +38,7 @@ export async function getCategories(cityId: number): Promise<Category[]> {
   });
 }
 
-export async function getLocations(
+export async function getFranchises(
   cityId: number,
   categoryId: number
 ): Promise<Franchise[]> {

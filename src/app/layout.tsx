@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import { BottomNav } from '@/components/bottom-nav';
-import { ReactQueryClientProvider } from '@/providers/react-query-provider';
+import { ReactQueryClientProvider } from '@/providers/react-query-provider'; // TODO: remove
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
